@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>World's Smallest Bakery | Fresh Homemade Treats</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    </head>
+    <body>
+        <section class="header" id="home">
+            <nav>
+                <a href="#home" class="brand-link">
+                    <img src="images/logo.png" alt="World's Smallest Bakery Logo">
+                    <span class="brand-name">World's Smallest Bakery</span>
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#brand">BRAND</a></li>
+                        <li><a href="#menu">MENU</a></li>
+                        <li><a href="#pricing">PRICING</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                        <li><a href="#qr">QR CODE</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <div class="text-box">
+                <p class="tagline-label">Our Tagline</p>
+                <h1>World's Smallest Bakery</h1>
+                <p class="hero-tagline">You can't buy happiness, but you can bake it—and that's pretty much the same thing.</p>
+                <div class="hero-buttons">
+                    <a href="#pricing" class="hero-btn buy-btn">BUY NOW</a>
+                    <a href="#contact" class="hero-btn">CONTACT US</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part A: Brand Creation -->
+        <section class="brand-section" id="brand">
+            <h1>Our Brand Story</h1>
+            <p class="section-intro">Part of building a digital brand is knowing who you are. Here is everything about World's Smallest Bakery.</p>
+
+            <div class="brand-card">
+                <div class="brand-logo-wrap">
+                    <img src="images/logo.png" alt="World's Smallest Bakery Logo">
+                </div>
+                <div class="brand-details">
+                    <div class="brand-item">
+                        <h3><i class="fa fa-store"></i> Brand Name</h3>
+                        <p><strong>World's Smallest Bakery</strong></p>
+                    </div>
+                    <div class="brand-item">
+                        <h3><i class="fa fa-quote-left"></i> Tagline / Slogan</h3>
+                        <p>"You can't buy happiness, but you can bake it—and that's pretty much the same thing."</p>
+                    </div>
+                    <div class="brand-item">
+                        <h3><i class="fa fa-lightbulb"></i> Business Idea</h3>
+                        <p>
+                            World's Smallest Bakery is a cozy homemade food startup that brings fresh, handcrafted
+                            baked treats straight from a family kitchen to your doorstep. We focus on small-batch baking
+                            using simple, high-quality ingredients—fluffy pancakes, warm mug cakes, and signature
+                            cakes—offering affordable comfort food with free local delivery and a personal touch that
+                            big bakeries cannot match.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products / Service Features -->
+        <section class="course" id="menu">
+            <h1>Bakery Items We Offer</h1>
+            <p>
+                Every morning our kitchen comes alive with the smell of fresh flour, sweet butter, and bubbling yeast.
+                We handcraft everything from scratch daily using simple, high-quality ingredients because you deserve
+                the absolute best. Grab a little treat, find a seat, and make yourself at home.
+            </p>
+
+            <div class="row">
+                <div class="course-col">
+                    <i class="fa fa-cookie feature-icon"></i>
+                    <h3>Fluffy Pancakes</h3>
+                    <p>Thick, pillowy layers served with butter and maple syrup. A warm breakfast classic made fresh to order.</p>
+                </div>
+                <div class="course-col">
+                    <i class="fa fa-mug-hot feature-icon"></i>
+                    <h3>Warm Mug Cakes</h3>
+                    <p>Cozy vibes in a cup. Baked to order so it is warm and gooey—perfect for a quick sweet craving.</p>
+                </div>
+                <div class="course-col">
+                    <i class="fa fa-cake-candles feature-icon"></i>
+                    <h3>Signature Cakes</h3>
+                    <p>Moist layers, rich frosting, and perfectly balanced sweetness. Available by the slice or as a full cake.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Details -->
+        <section class="pricing" id="pricing">
+            <h1>Pricing Details</h1>
+            <p class="section-intro">Honest prices for honest baking. All items are made fresh when you order.</p>
+
+            <div class="row">
+                <div class="pricing-col">
+                    <div class="price-badge">Bestseller</div>
+                    <h3>Fluffy Pancakes</h3>
+                    <p class="price">₹120 <span>/ plate (3 pcs)</span></p>
+                    <ul>
+                        <li><i class="fa fa-check"></i> Served with butter &amp; syrup</li>
+                        <li><i class="fa fa-check"></i> Freshly made every morning</li>
+                        <li><i class="fa fa-check"></i> Free delivery within 1 km</li>
+                    </ul>
+                    <a href="#contact" class="hero-btn buy-btn">BUY NOW</a>
+                </div>
+                <div class="pricing-col featured">
+                    <div class="price-badge">Most Popular</div>
+                    <h3>Warm Mug Cake</h3>
+                    <p class="price">₹90 <span>/ cup</span></p>
+                    <ul>
+                        <li><i class="fa fa-check"></i> Chocolate or vanilla flavour</li>
+                        <li><i class="fa fa-check"></i> Baked fresh in 5 minutes</li>
+                        <li><i class="fa fa-check"></i> Perfect single-serving treat</li>
+                    </ul>
+                    <a href="#contact" class="hero-btn buy-btn">BUY NOW</a>
+                </div>
+                <div class="pricing-col">
+                    <div class="price-badge">Celebration</div>
+                    <h3>Signature Cake</h3>
+                    <p class="price">₹60 <span>/ slice</span></p>
+                    <p class="price-sub">Full cake from ₹650</p>
+                    <ul>
+                        <li><i class="fa fa-check"></i> Custom flavours available</li>
+                        <li><i class="fa fa-check"></i> Ideal for birthdays &amp; parties</li>
+                        <li><i class="fa fa-check"></i> Free surprise treat with every order</li>
+                    </ul>
+                    <a href="#contact" class="hero-btn buy-btn">BUY NOW</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Features -->
+        <section class="facilities" id="about">
+            <h1>Why Choose Us?</h1>
+            <p>We are not just about baking—we deliver a comforting experience with every order.</p>
+
+            <div class="row">
+                <div class="facilities-col">
+                    <img src="images/delivery.png" alt="Free Delivery">
+                    <h3>Free Local Delivery</h3>
+                    <p>Stay cozy at home! We offer free delivery for all orders placed within a 1 km radius of our kitchen.</p>
+                </div>
+                <div class="facilities-col">
+                    <img src="images/freebies.png" alt="Freebies">
+                    <h3>Free-bees</h3>
+                    <p>Every order comes with a little surprise free treat—our way of saying thank you for supporting us!</p>
+                </div>
+                <div class="facilities-col">
+                    <img src="images/custom.png" alt="Custom Orders">
+                    <h3>Custom Orders</h3>
+                    <p>Got a specific craving or a creative cake idea? Tell us and we will bake it exactly how you imagine it.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Kitchen -->
+        <section class="campus">
+            <h1>Our Kitchen</h1>
+            <p>
+                Welcome to headquarters—aka our family kitchen. The oven is always working overtime and the vibes are
+                immaculate. It is a small space, but we are doing big things here. No corporate energy—just pure,
+                hometown cozy baking.
+            </p>
+
+            <div class="row">
+                <div class="campus-col">
+                    <img src="images/Kitchen1.png" alt="Main Kitchen">
+                    <div class="layer">
+                        <h3>OUR MAIN KITCHEN (HQ)</h3>
+                    </div>
+                </div>
+                <div class="campus-col">
+                    <img src="images/kitchen2.png" alt="Our Chef">
+                    <div class="layer">
+                        <h3>MEET OUR CHEF</h3>
+                    </div>
+                </div>
+                <div class="campus-col">
+                    <img src="images/kitchen3.png" alt="Chef Cooking">
+                    <div class="layer">
+                        <h3>BAKING IN ACTION</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h1>What Our Customers Say</h1>
+            <p>Don't just take our word for it—read reviews from real sweet-tooth fans.</p>
+
+            <div class="row">
+                <div class="testimonial-col">
+                    <img src="images/user1.png" alt="Customer Chloe">
+                    <div>
+                        <p>The Warm Mug Cakes changed my week. I ordered during stressful exam time and it genuinely cheered me up. Immaculate vibes only!</p>
+                        <h3>Chloe Henderson</h3>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-col">
+                    <img src="images/user2.png" alt="Customer Marcus">
+                    <div>
+                        <p>The Signature Cakes are out of this world. Perfectly moist, and the frosting is not overwhelmingly sweet. 10/10—treat culture is thriving here.</p>
+                        <h3>Marcus Sterling</h3>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us -->
+        <section class="contact" id="contact">
+            <h1>Contact Us</h1>
+            <p class="section-intro">Ready to order? Fill in the form below or reach us directly—we would love to bake for you!</p>
+
+            <div class="contact-wrapper">
+                <form class="contact-form" onsubmit="handleOrder(event)">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <input type="email" placeholder="Email Address">
+                    <select required>
+                        <option value="">Select an Item</option>
+                        <option>Fluffy Pancakes — ₹120</option>
+                        <option>Warm Mug Cake — ₹90</option>
+                        <option>Signature Cake (Slice) — ₹60</option>
+                        <option>Signature Cake (Full) — from ₹650</option>
+                        <option>Custom Order</option>
+                    </select>
+                    <textarea rows="4" placeholder="Your message or special instructions"></textarea>
+                    <button type="submit" class="hero-btn buy-btn">PLACE ORDER</button>
+                </form>
+
+                <div class="contact-info">
+                    <h3><i class="fa fa-location-dot"></i> Location</h3>
+                    <p>Mom's Kitchen, Home Street, Your City</p>
+                    <h3><i class="fa fa-phone"></i> Phone</h3>
+                    <p>+91 98765 43210</p>
+                    <h3><i class="fa fa-envelope"></i> Email</h3>
+                    <p>hello@worldssmallestbakery.com</p>
+                    <h3><i class="fa fa-clock"></i> Hours</h3>
+                    <p>Mon – Sat: 8:00 AM – 8:00 PM</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part C: QR Code -->
+        <section class="qr-section" id="qr">
+            <h1>Scan &amp; Visit Our Website</h1>
+            <p class="section-intro">
+                Scan this QR code with your phone camera to open our bakery website instantly.
+                Once you publish this site online, the QR code will automatically link to your live URL.
+            </p>
+
+            <div class="qr-card">
+                <img id="qrImage" src="" alt="QR Code for World's Smallest Bakery Website">
+                <div class="qr-details">
+                    <h3>Website URL</h3>
+                    <p id="siteUrl" class="url-display">Loading...</p>
+                    <p class="qr-note">
+                        <i class="fa fa-circle-info"></i>
+                        Tip: Publish your site on GitHub Pages, Netlify, or Vercel, then test this QR code by scanning it with your phone.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="footer">
+            <img src="images/logo.png" alt="Logo" class="footer-logo">
+            <h4>World's Smallest Bakery</h4>
+            <p>
+                Started from a laptop and a dream in our cozy family kitchen. We bake to bring a little slice of
+                comfort to your everyday hustle. No corporate energy—just pure love and flour.
+            </p>
+            <div class="icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <p>Made with <i class="fa-regular fa-heart"></i> by World's Smallest Bakery</p>
+        </section>
+
+        <script>
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+
+            function handleOrder(event) {
+                event.preventDefault();
+                alert("Thank you! Your order request has been received. We will contact you shortly to confirm.");
+                event.target.reset();
+            }
+
+            // Part C: Generate QR code from the current website URL
+            (function () {
+                var url = window.location.href.split("#")[0];
+                document.getElementById("siteUrl").textContent = url;
+                document.getElementById("qrImage").src =
+                    "https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=" +
+                    encodeURIComponent(url);
+            })();
+        </script>
+    </body>
+</html>
