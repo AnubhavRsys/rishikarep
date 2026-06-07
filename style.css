@@ -118,17 +118,6 @@ nav img {
     flex-wrap: wrap;
 }
 
-.buy-btn {
-    background: #f47836;
-    border-color: #f47836;
-}
-
-.buy-btn:hover {
-    background: #ffffff;
-    color: #f47836;
-    border-color: #ffffff;
-}
-
 .hero-btn {
     display: inline-block;
     text-decoration: none;
@@ -145,6 +134,20 @@ nav img {
     border: 1px solid #f47836;
     background: #f47836;
     transition: 1s;
+}
+
+.hero-btn.buy-btn,
+.buy-btn {
+    background: #f47836;
+    border-color: #f47836;
+    color: #ffffff;
+}
+
+.hero-btn.buy-btn:hover,
+.buy-btn:hover {
+    background: #d9652a;
+    border-color: #d9652a;
+    color: #ffffff;
 }
 
 nav .fa {
@@ -567,15 +570,33 @@ h3 {
     background: #fff;
 }
 
-.contact-form button {
-    border: none;
+.contact-form .submit-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 14px 34px;
+    font-size: 15px;
+    font-family: "Special Elite", system-ui;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: #f47836;
+    border: 2px solid #f47836;
+    border-radius: 8px;
+    color: #ffffff;
     cursor: pointer;
-    align-self: flex-start;
+    align-self: stretch;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.contact-form button:disabled {
+.contact-form .submit-btn:hover {
+    background: #d9652a;
+    border-color: #d9652a;
+    transform: translateY(-1px);
+}
+
+.contact-form .submit-btn:disabled {
     opacity: 0.7;
     cursor: not-allowed;
+    transform: none;
 }
 
 .form-status {
@@ -621,8 +642,7 @@ h3 {
         flex-direction: column;
     }
 
-    .contact-form button {
-        align-self: stretch;
+    .contact-form .submit-btn {
         text-align: center;
     }
 }
