@@ -318,6 +318,44 @@ h3 {
     margin-bottom: 12px;
 }
 
+/*----- Delivery Notice -----*/
+.delivery-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    max-width: 720px;
+    margin: 0 auto 36px;
+    padding: 16px 20px;
+    background: #fff3e8;
+    border: 1px solid #f4b88a;
+    border-left: 4px solid #f47836;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.delivery-notice i {
+    color: #f47836;
+    font-size: 1.2rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.delivery-notice p {
+    padding: 0;
+    color: #5c3d2e;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.delivery-notice strong {
+    color: #3d2314;
+}
+
+.contact-notice {
+    max-width: none;
+    margin-bottom: 28px;
+}
+
 /*----- Pricing Section -----*/
 .pricing {
     width: 80%;
