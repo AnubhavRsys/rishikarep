@@ -239,11 +239,11 @@
             <p class="section-intro">Ready to order? Fill in the form below or reach us directly—we would love to bake for you!</p>
 
             <div class="contact-wrapper">
-                <form class="contact-form" onsubmit="handleOrder(event)">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="tel" placeholder="Phone Number" required>
-                    <input type="email" placeholder="Email Address">
-                    <select required>
+                <form class="contact-form" id="orderForm" onsubmit="handleOrder(event)">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <input type="email" name="email" placeholder="Email Address">
+                    <select name="item" required>
                         <option value="">Select an Item</option>
                         <option>Fluffy Pancakes — ₹120</option>
                         <option>Warm Mug Cake — ₹90</option>
@@ -251,17 +251,18 @@
                         <option>Signature Cake (Full) — from ₹650</option>
                         <option>Custom Order</option>
                     </select>
-                    <textarea rows="4" placeholder="Your message or special instructions"></textarea>
-                    <button type="submit" class="hero-btn buy-btn">PLACE ORDER</button>
+                    <textarea name="message" rows="4" placeholder="Your message or special instructions"></textarea>
+                    <button type="submit" class="hero-btn buy-btn" id="submitBtn">SUBMIT</button>
+                    <p class="form-status" id="formStatus" aria-live="polite"></p>
                 </form>
 
                 <div class="contact-info">
                     <h3><i class="fa fa-location-dot"></i> Location</h3>
-                    <p>Mom's Kitchen, Home Street, Your City</p>
+                    <p>Mom's Kitchen, 13/34 Shakti Nagar, Nangia Park, Delhi - 110007</p>
                     <h3><i class="fa fa-phone"></i> Phone</h3>
-                    <p>+91 98765 43210</p>
+                    <p>+91 97110 20605</p>
                     <h3><i class="fa fa-envelope"></i> Email</h3>
-                    <p>hello@worldssmallestbakery.com</p>
+                    <p>butterflyboy600@gmail.com</p>
                     <h3><i class="fa fa-clock"></i> Hours</h3>
                     <p>Mon – Sat: 8:00 AM – 8:00 PM</p>
                 </div>
@@ -306,6 +307,8 @@
         </section>
 
         <script>
+            var GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwXOSO3RwosUkF1nF6bb9Ip8ka9LbfF35Vl8n__9jvpo11zElN7kMN3kS6ynVhWJ_X1/exec";
+
             var navLinks = document.getElementById("navLinks");
 
             function showMenu() {
@@ -316,10 +319,50 @@
                 navLinks.style.right = "-200px";
             }
 
-            function handleOrder(event) {
+            function setFormStatus(message, type) {
+                var status = document.getElementById("formStatus");
+                status.textContent = message;
+                status.className = "form-status " + (type || "");
+            }
+
+            async function handleOrder(event) {
                 event.preventDefault();
-                alert("Thank you! Your order request has been received. We will contact you shortly to confirm.");
-                event.target.reset();
+
+                if (GOOGLE_SCRIPT_URL === "PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE") {
+                    setFormStatus("Form is not connected yet. Please add your Google Script URL in index.html.", "error");
+                    return;
+                }
+
+                var form = event.target;
+                var submitBtn = document.getElementById("submitBtn");
+                var data = {
+                    name: form.name.value.trim(),
+                    phone: form.phone.value.trim(),
+                    email: form.email.value.trim(),
+                    item: form.item.value,
+                    message: form.message.value.trim()
+                };
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Submitting...";
+                setFormStatus("", "");
+
+                try {
+                    await fetch(GOOGLE_SCRIPT_URL, {
+                        method: "POST",
+                        mode: "no-cors",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(data)
+                    });
+
+                    form.reset();
+                    setFormStatus("Thank you! Your order has been submitted. We will contact you shortly.", "success");
+                } catch (error) {
+                    setFormStatus("Something went wrong. Please try again or call us directly.", "error");
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "SUBMIT";
+                }
             }
 
             // Part C: Generate QR code from the current website URL

@@ -573,6 +573,25 @@ h3 {
     align-self: flex-start;
 }
 
+.contact-form button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.form-status {
+    font-size: 14px;
+    padding: 0;
+    min-height: 0;
+}
+
+.form-status.success {
+    color: #2e7d32;
+}
+
+.form-status.error {
+    color: #c62828;
+}
+
 .contact-info {
     flex: 0.8;
     background: #fff5ef;
